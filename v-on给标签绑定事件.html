@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于绑定特性的指令2</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--v-on给标签绑定事件-->
+        <button v-on:click="click1">确定</button>
+        <!--v-on:click可以简写为@click-->
+        <button @click="add">+</button>
+        <p>num的值为：{{num}}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    num: 0
+                }
+            },
+            methods: {
+                //定义click1
+                click1(){
+                    alert(222)
+                },
+                add(){
+                    //使num加1
+                    //使用this.[变量名]表示调用data中的数据
+                    this.num++
+                }
+            },
+        })
+    </script>
+    
+</body>
+</html>
