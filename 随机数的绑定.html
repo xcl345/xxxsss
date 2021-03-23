@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>随机数</title>
+		<script src="./js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h2>猜数字小游戏</h2>
+			<p v-model="ss">{{ss}}</p>
+			<p>请输入一个0-10之间的数字</p> 
+			<input v-model="scores" />
+			<a v-if="scores==ss">恭喜你，猜对了!</a>
+		</div>
+		<script>
+			new Vue({
+				el: '#app',
+				data(){
+					return{
+						ss: Math.floor(Math.random()*10),
+						scores: ''
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
