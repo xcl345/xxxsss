@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.js"></script>
+    <title>练习1</title>
+    <style>
+        #app div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+        .black{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div @click="turn" :class="{'black': flag}"></div>
+        <!-- <div @click="turn" :style="{background}"></div> -->
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    flag: false,
+                    // background: '#fff'
+                }
+            },
+            methods: {
+                turn(){
+                    this.flag = !this.flag
+                    // if(this.flag){
+                    //     this.background = '#000'
+                    // }else{
+                    //     this.background = '#fff'
+                    // }
+                }
+            },
+
+        })
+
+        //在#app中加入一个有宽高和边框（我们能看到）的div元素
+        //点击该元素后，颜色变为黑色，再点击，颜色变为白色，以此类推
+    </script>
+</body>
+</html>
