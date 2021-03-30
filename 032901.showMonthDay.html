@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="./js/vue.js"></script>
+		<title>用户指定月份天数输出</title>
+	</head>
+	<body>
+		<body>
+			<div id="app">
+				1月份天数：<input v-model="Month1" /> {{Month1}} <br>
+				2月份天数：<input v-model="Month2" />	{{Month2}} <br>
+				3月份天数：<input v-model="Month3" />	{{Month3}} <br>
+				4月份天数：<input v-model="Month4" />	{{Month4}} <br>
+				
+			</div>
+			
+			<script>
+				let v = new Vue({
+					el:'#app',
+					data: {
+						Month1: '',
+						Month2: '',
+						Month3: '',
+						Month4: '',
+					}
+				})
+			</script>
+		</body>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="./js/vue.js"></script>
+		<title>985-211大学判断程序</title>
+	</head>
+	<body>
+		<div id="app">
+			输入学校名称：
+			<input v-model="school" />
+			<p v-if="school=='清华大学'">该学校是985、211大学</p>
+			<p v-if="school=='东华大学'">该学校是211大学</p>
+			<p v-if="school=='南京理工大学'">该学校是211大学</p>
+			<p v-if="school=='北京大学'">该学校是985、211大学</p>
+			<p v-if="school=='西藏大学'">该学校是211大学</p>
+			<p v-if="school=='广西科技师范学院'">该学校是既不是985大学，也不是211大学</p>
+			
+		</div>
+				
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					school:'',
+				}
+			})
+		</script>
+	</body>
+</html>
