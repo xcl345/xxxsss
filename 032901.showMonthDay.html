@@ -8,21 +8,16 @@
 	<body>
 		<body>
 			<div id="app">
-				1月份天数：<input v-model="Month1" /> {{Month1}} <br>
-				2月份天数：<input v-model="Month2" />	{{Month2}} <br>
-				3月份天数：<input v-model="Month3" />	{{Month3}} <br>
-				4月份天数：<input v-model="Month4" />	{{Month4}} <br>
-				
+				月份：<input v-model="Month" /> {{Month1}} <br>				
+				天数：{{day[Month-1]}}
 			</div>
 			
 			<script>
 				let v = new Vue({
 					el:'#app',
 					data: {
-						Month1: '',
-						Month2: '',
-						Month3: '',
-						Month4: '',
+						Month: '1',
+						day: [31,28,31,30,31,30,31,31,30,31,30,31]
 					}
 				})
 			</script>
