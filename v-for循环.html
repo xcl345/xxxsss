@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="./js/vue.js"></script>
+		<title>v-for循环</title>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="num" />
+			<p v-for="school in schools">
+				<a v-if="num==school.id">
+					你输入的国家代码是+{{school.id}}，它表示{{school.name}}，首都为：{{school.typ}}
+				</a>
+			</p>
+			
+			
+			
+		</div>
+				
+		<script> 
+			let v=new Vue({
+				el:'#app',
+				data:{
+					num: '86',
+					schools:[
+						{id: '86', name: '中国', typ: '北京'},
+						{id: '1', name: '美国', typ: '华盛顿'},
+						{id: '2', name: '日本', typ: '东京'},
+						{id: '3', name: '泰国', typ: '曼谷'},
+					]
+				},
+				
+			})
+		</script>
+	</body>
+</html>
