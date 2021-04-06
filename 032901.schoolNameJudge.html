@@ -7,22 +7,23 @@
 	</head>
 	<body>
 		<div id="app">
-			输入学校名称：
-			<input v-model="school" />
-			<p v-if="school=='清华大学'">该学校是985、211大学</p>
-			<p v-if="school=='东华大学'">该学校是211大学</p>
-			<p v-if="school=='南京理工大学'">该学校是211大学</p>
-			<p v-if="school=='北京大学'">该学校是985、211大学</p>
-			<p v-if="school=='西藏大学'">该学校是211大学</p>
-			<p v-if="school=='广西科技师范学院'">该学校是既不是985大学，也不是211大学</p>
+			
+			{{school[0].name}}<br>
+			{{school[0].typ}}
 			
 		</div>
 				
-		<script type="text/javascript">
+		<script type="text/javascript"> 
 			let v=new Vue({
 				el:'#app',
 				data:{
-					school:'',
+					school:[
+						{name: '清华大学', typ: '985'},
+						{name: '东华大学', typ: '211'},
+						{name: '北京大学', typ: '985'},
+						{name: '广西科技师范学院', typ: '该学校是既不是985大学，也不是211大学'},
+						{name: '西藏大学', typ: '211'},
+					]
 				}
 			})
 		</script>
