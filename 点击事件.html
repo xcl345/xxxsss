@@ -14,14 +14,17 @@
 		</div>
 		
 		<script>
-			let v = new Vue({
+			new Vue({
 				el:'#app',
-				data:{
-					userNumber: 0
+				data(){
+					return{
+						userNumber: 0
+					}
+					
 				},
 				methods:{
 					myFunction(){
-						v.userNumber++;
+						userNumber++;
 					}
 				},
 			})
