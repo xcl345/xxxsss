@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>找茬游戏的设计</title>
+		<script src="./js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				{{userNumber}}
+				<input type="button" value="请点击" @click="myFunction"/>
+			</div>
+		</div>
+		
+		<script>
+			let v = new Vue({
+				el:'#app',
+				data:{
+					userNumber: 0
+				},
+				methods:{
+					myFunction(){
+						v.userNumber++;
+					}
+				},
+			})
+		</script>
+		
+	</body>
+</html>
