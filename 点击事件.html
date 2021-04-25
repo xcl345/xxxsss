@@ -8,10 +8,11 @@
 	<body>
 		<div id="app">
 			<div>
-				{{userNumber}}
-				<input type="button" value="请点击" @click="myFunction()"/>
-				<br><br>
-				
+				<h4>点击图片次数为5的倍数，游戏即可通关</h4>
+				<h3>现点击次数：{{userNumber}}</h3>
+				<!-- <input type="button" value="请点击" @click="myFunction()"/> -->
+				<br>
+				<img src="./img/002.jpg" @click="myFunction()">
 				
 			</div>
 		</div>
@@ -25,7 +26,9 @@
 				methods:{
 					myFunction(){
 						v.userNumber++;
-						
+						if(v.userNumber%5 == 0){
+							alert("游戏通关成功！")
+						}
 					}
 				},
 			})
